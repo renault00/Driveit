@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 	if @user.save
 	# Handle a successful save.
 	flash[:success] = "Welcome to the Sample App!"
-	redirect to @user
+	redirect_to @user
 	else
 	render 'new'
 	end
