@@ -1,0 +1,16 @@
+<div  class="row well">
+	<aside class="pull-left">
+		<%= link_to image_tag product.image_url(:thumbnail).to_s, class: "thumbnail" %>
+		<b><%= product.name + " " + product.car_model + " " %></b><br>
+		
+		
+	</aside>
+					
+	<aside class="pull-left span4">		
+		<b><%= number_to_currency product.price, :unit => "R" %></b><br>
+		<%= product.car_color %> <br>
+		<%= product.car_year %><br>
+		<%= product.mileage + " km" %><br>
+
+	</aside>
+</div>

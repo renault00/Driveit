@@ -6,9 +6,10 @@ SampleApp::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   resources :users
+  resources :products
   resources :sessions, only: [:new, :create, :destroy]
 
-  
+  match '/cars', to: 'products#index'
 
   match '/signup', to: 'users#new'
   match '/edit_user', to: 'users#edit'

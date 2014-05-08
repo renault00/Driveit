@@ -17,5 +17,6 @@
 
 class Product < ActiveRecord::Base
   attr_accessible :car_color, :car_model, :car_year, :category_id, :image, :mileage, :name, :price, :product_id
- # mount_uploader :image, ImageUpLoader
+  
+  mount_uploader :image, ImageUploader
 end
