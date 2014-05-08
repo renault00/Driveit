@@ -1,11 +1,47 @@
 
-<div class="center hero-unit">
-<h1>Welcome to the Sample App</h1>
+<div class="center">
+<h3>Welcome to Driver It Autotrader</h3>
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner">
+		    <div class="item active">
+		      <%= image_tag('porche.jpg', alt: "Home image")  %>		      
+		    </div>
+		    <div class="item">
+		      <%= image_tag('Mitsubishi ASX.jpg', alt: "Home image")  %>		      
+		    </div>
+		    <div class="item">
+		      <%= image_tag('Ford Focus.jpg', alt: "Home image")  %>		      
+		    </div>
+		  </div>
+
+		  <!-- Controls -->
+		  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left"></span>
+		  </a>
+		  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right"></span>
+		  </a>
+		</div>
 <h2>
-This is the home page for the
-<a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-sample application.
+
+
+
+
 </h2>
-<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+
+<%= link_to "Sign up now!", signup_path, class: "signUpButton" %>
+
+		<div>
+
+			<h4>This week's latest offers</h4>
+
+		</div>
 </div>
-<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
