@@ -10,7 +10,8 @@ class UsersController < ApplicationController
 	@user = User.new(params[:user])
 	if @user.save
 	sign_in_ @user
-	flash[:success] = "Welcome to the Sample App!"
+	UserMailer.registration_confirmation(@user).deliver
+	flash[:success] = "Thank you for registering with Driver It!"
 	redirect_to @user
 	else
 	render 'new'

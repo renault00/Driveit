@@ -8,6 +8,7 @@ gem 'activeadmin'
 gem 'carrierwave'
 gem 'rmagick', '~> 2.13.2', :platforms => :ruby
 gem 'sqlite3'
+gem 'mail'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

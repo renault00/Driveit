@@ -54,6 +54,8 @@ Devise.setup do |config|
   # enable it only for token authentication.
   # config.http_authenticatable = false
 
+  config.secret_key = '-- secret key --'
+
   # If http headers should be returned for AJAX requests. True by default.
   # config.http_authenticatable_on_xhr = true
 
