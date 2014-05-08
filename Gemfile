@@ -7,14 +7,14 @@ gem 'activeadmin'
 
 gem 'carrierwave'
 gem 'rmagick', '~> 2.13.2', :platforms => :ruby
-#gem 'sqlite3'
+gem 'sqlite3'
 gem 'mail'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development do
-	gem 'sqlite3', '1.3.5'
+	#gem 'sqlite3', '1.3.5'
 	gem 'annotate'
 end
 
@@ -35,7 +35,7 @@ group :production do
 	gem 'pg', '0.12.2'
 end
 
-gem 'jquery-rails', '>= 2.0.1'
+gem 'jquery-rails', '~> 2.3.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

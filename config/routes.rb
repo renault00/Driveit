@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+  root to: 'static_pages#home'
+  
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -6,7 +8,7 @@ SampleApp::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
-  root to: 'static_pages#home'
+  
 
   match '/signup', to: 'users#new'
   match '/edit_user', to: 'users#edit'
