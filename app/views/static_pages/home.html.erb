@@ -41,7 +41,22 @@
 
 		<div>
 
-			<h4>This week's latest offers</h4>
+			<div class="clear"></div>
+
+
+			<div class="row clear">
+			    <h1>This week's latest offers</h1>
+			  	<% Product.find(:all, :order => "price desc", :limit => 3).each do |product| %>
+			  	<div class="span4">
+			    		<%= image_tag product.image_url(:thumbnail).to_s, class: "thumbnail" %><br>
+			    		<b><%= product.name.capitalize %></b><br>
+			    		<b><%= product.car_model.capitalize %></b><br>
+			    		<%= product.car_year %><br>
+			    		<%= number_to_currency product.price, :unit => "R" %><br>
+			    	
+			    	</div>     
+			    <% end %>
+			  </div> 
 
 		</div>
 </div>

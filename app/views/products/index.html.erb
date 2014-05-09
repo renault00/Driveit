@@ -1,5 +1,25 @@
+
+
+<div class='row'>
+	<div class="pull-left">
+			<%= form_tag products_path, :method => 'get', :class => 'form-inline', :role => 'form' do %>
+				<form class="form-inline" role="form">
+				  <div class="form-group">
+				    <%= text_field_tag :search, params[:search] %>
+
+				  </div>
+				  <%= submit_tag "Search", :name => nil, :id => 'searchBtn'  %>
+			<% end %>
+	</div>
+	
+	<p>
+		<b><%= pluralize(@products.count, 'car') %> </b>
+	</p>
+</div>
+
 <div class="row">
 	<%= will_paginate %>
 		<%= render @products %>
 	<%= will_paginate %>
+
 </div>

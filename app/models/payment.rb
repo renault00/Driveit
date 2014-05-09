@@ -12,4 +12,5 @@
 
 class Payment < ActiveRecord::Base
   attr_accessible :order_id, :payment_method, :user_id
+  belongs_to :order
 end
