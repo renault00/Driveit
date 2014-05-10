@@ -4,7 +4,5 @@ ActionMailer::Base.smtp_settings = {
 	:port				=> 587,
 	:domain				=> "",
 	:user_name			=> "driveritauto@gmail.com",
-	:password			=> "$Driver!t",
-	:authentication		=> "plain",
-	:enable_starttls_auto	=> true
+	:password			=> "$Driver!t"
 }
