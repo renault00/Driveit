@@ -13,21 +13,24 @@
 #  category_id :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  category    :string(255)
 #
 
 class Product < ActiveRecord::Base
-  attr_accessible :car_color, :car_model, :car_year, :category_id, :image, :mileage, :name, :price, :product_id
+  attr_accessible :car_color, :car_model, :car_year, :category_id, :image, :mileage, :name, :price, :product_id, :category
   
   mount_uploader :image, ImageUploader
 
   def self.search(search)
   	if search
   		
-  		where('name LIKE ? OR car_color LIKE ? OR car_model LIKE ? OR car_year LIKE ? ',"%#{search}", "%#{search}", "%#{search}", "%#{search}")
+  		where('name LIKE ? OR car_color LIKE ? OR car_model LIKE ? OR car_year LIKE ? OR category LIKE ? ',"%#{search}", "%#{search}", "%#{search}", "%#{search}","%#{search}")
 
   	else
   		scoped
   	end
 
   end
+
+ 
 end

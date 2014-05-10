@@ -11,6 +11,8 @@ SampleApp::Application.routes.draw do
 
   match '/cars', to: 'products#index'
 
+  match '/find_products', to: 'products#index'
+
   match '/signup', to: 'users#new'
   match '/edit_user', to: 'users#edit'
   match '/signin', to: 'sessions#new'
