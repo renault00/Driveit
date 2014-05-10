@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
 
         @products = Product.search(params[:search]).paginate(page: params[:page], :per_page => 10 ,:conditions => params[:find])
     else
-        @products = Product.paginate(page: params[:page], :per_page => 10 ,:conditions => params[:find], :order => 'name DESC')
+        @products = Product.paginate(page: params[:page], :per_page => 2 ,:conditions => params[:find], :order => 'name DESC')
     end
 
 
